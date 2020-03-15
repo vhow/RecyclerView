@@ -1,0 +1,52 @@
+:root {
+    --item-background-color: teal; 
+    --transparent: rgba(0, 0, 0, 0);
+    --window-width: 22vw;
+    --window-height: 61vh;
+    --item-height: 12vh;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.window {
+    margin-right: 30vw;
+    height: var(--window-height);
+    color: snow;
+    position: relative;
+    border: 3px dashed deeppink;
+    overflow: visible;
+}
+
+.hide {
+    overflow: hidden;
+}
+
+.item {
+    width: var(--window-width);
+    height: var(--item-height);
+    background-color: var(--item-background-color);
+    border: 1vh solid var(--transparent);
+    transition: border 300ms;
+    background-clip: content-box;
+}
+
+.item:hover {
+    border: 1px solid var(--transparent);
+}
